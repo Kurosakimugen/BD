@@ -1,0 +1,15 @@
+1) π nr (Aluno)
+2) π cod,design (σ curso = 'AC' (Cadeira))
+3) π Nome (Aluno) ∩ π Nome (Prof) ou π Nome (Aluno ⨝ Prof) ou  -> João e Fernando
+4) π Nome (Aluno) - π Nome (Prof)
+5) π Nome (Aluno) ∪ π Nome (Prof)
+6) π Nome (Aluno ⨝ σ cod = 'TS1' Prova) ou π Nome (σ cod = 'TS1' (Aluno ⨝ Prova))
+7) π Nome (σ curso = 'IS' ((Aluno ⨝ Prova) ⨝ Cadeira))
+8) π Nome,cod (σ nota > 10 ( Prova ⨝ (π cod (σ curso = 'IS' (Cadeira)))) ⨝ Aluno ) / π cod (σ curso = 'IS' (Cadeira))
+9?) π max(nota) Prova
+10?) π avg(nota) (σ cod = 'BD' Prova)
+11?) π cnt(nr) (Aluno)
+12?) π curso, cnt(curso) (Cadeira) ou π curso, cnt(*) (Cadeira)
+13?) π nr,cnt(cod) Prova
+14?) π avg(contagem) (ρ nr,contagem(π nr,cnt(*) Prova)
+15?) π Nome,media=avg(nota) (Aluno ⨝ Prova)
